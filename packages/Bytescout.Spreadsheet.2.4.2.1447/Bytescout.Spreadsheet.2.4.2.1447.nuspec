@@ -1,0 +1,513 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Bytescout.Spreadsheet</id>
+    <version>2.4.2.1447</version>
+    <authors>ByteScout</authors>
+    <owners>ByteScout</owners>
+    <licenseUrl>http://bytescout.com/files/help/BytescoutSpreadsheetSDK/source/html/a48b0b0e-7321-4778-817a-8b35690fa815.htm</licenseUrl>
+    <projectUrl>http://bytescout.com/products/developer/spreadsheetsdk/bytescoutspreadsheetsdk.html</projectUrl>
+    <iconUrl>http://bytescout.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bytescout Spreadsheet SDK for .NET, ASP.NET, ActiveX, VB6 Command Line console
+
+(c) ByteScout 2006-2015
+
+Read XLS, Write XLS, Calculate XLS with this SDK from your .NET and ASP.NET applications
+Bytescout Spreadsheet SDK writes, reads, calculates and converts spreadsheets (XLS, XLSX, CSV, TXT, ODS)
+
+- No Excel or Office installed are required!
+- Formula calculation support (Excel style formulas)
+- Writes to XLS, XLSX, HTML, CSV, TXT, XML formats
+- Reads XLS, XLSX (MS Excel 2007), ODS (Open Office Calc), CSV, TXT formats
+- Supports cell formating, rich text, charts, images, borders etc
+- Includes support for Compact Framework .NET (Windows CE and Pocket PC)
+- Includes ActiveX legacy languages support like Visual Basic 6, VBScript, Javascript, ASP
+- Command line is included for conversion of spreadsheet files from command line or .BAT files
+- and more!
+
+http://bytescout.com/products/developer/spreadsheetsdk/bytescoutspreadsheetsdk.html</description>
+    <releaseNotes>Bytescout Spreadsheet SDK for .NET, ASP.NET, CF.NET, ActiveX and Command Line Console
+------------------
+2.42.1447 (June 17, 2015)
+read XLS, write XLS, read XLSX, write XLS better
+XLSX support improved and consumes much less memory now
+minor improvements and bug-fixes
+
+2.41.1396 (April 6, 2015)
+reading and writing of XLS files improved
+Windows CE and Pocket PC minor issues fixed
+new "Save As PDF" source code sample
+new "Insert Page Break" source code sample 
+new "Add Header And Footer" sample
+PHP sample added	
+minor bug-fixes and speed improvements
+
+2.40.1358 (September 9, 2014)
+improved handling of incorrect formula values while calculating 
+CSV to XLS samples updated
+improved XLS format handling
+license updated
+minor fixes
+
+2.40.1346 (April 7, 2014)
+read xls, write xls, read csv, read xlsx, write xlsx in .NET and ASP.NET
+.NET 4.50 dlls added
+Visual Studio 2013 support improved
+XLSX and XLS writing improved
+Index Out Of Range error fixed 
+Formula calculation improved
+new Worksheet.SaveAsTXT, SaveAsCSV, SaveAsXML methods with encoding selection
+number formatting related issues fixes
+minor bug-fixes
+
+2.40.1314 (December 11, 2013)
+read xls, write xls, read xlsx, write xlsx in .NET and ASP.NET
+improved formulas calculation errors handling
+Calculation with OLE links improved
+issues with MAX(), ROUNDUP() functions calculation fixed
+XLSX reading and writing improved
+new sample: Merge Cells and Set Alignment
+PHP source code sample added
+support for CSV with Unicode symbos added
+minor bug-fixes
+
+2.30.1287 (May 2, 2013)
+read xls and write xls .net better with new version
+improved xls and xlsx support
+minor issues fixed
+
+2.30.1283 (March 28, 2013)
+read and write excel files from .net with this new version
+improved xlsx support
+simplified licensing: now there are only 2 major type of licenses (for desktop and for web apps)
+minor issues fixed
+
+2.30.1276 (February 20, 2013)
+Improved support for shared formulas in XLSX format
+AutoFit fixes minor issues related to image sizes
+new property: Worksheet.AutoFitRows to enable auto fit for rows
+issue fixed related to unlocked ranges on protected worksheets 
+improved Windows 7 and Windows 8 compatibility
+
+2.30.1256 (October 30, 2012)
+new methods to load data into selected worksheet directly (currently works for CSV and txt files): Worksheets.AddFromFile(string FileName) and Worksheets.AddFromFile(string FileName, string Delimiter, Encoding Encoding) 
+issue fixed: crash on broken link inside cell 
+XLSX and formula calculation: now library throws exception in case formula can not be parsed for some reason
+minor bug-fixes
+
+2.30.1237 (September 24, 2012)
+XLS format: issue fixed related to incorrect handling of data validation rules with missing cell references
+XLSX format: now if the library not able to convert formula in XLSX then raises exception (previously it was working in silent mode exceptions raised)
+issue with protected worksheet handling in XLS format fixed
+issue with Pivot tables lost fixed when reading XLSX files and writing back to XLSX
+Source code sample showing how to use Range.SpecialCells added
+Range class improved, now provides .SpecialCells functionality
+exceptions handling improved
+adding image to spreadsheet document source code sample fixed
+fixing issues with some formulas in XLSX format
+
+2.30.1183 (May 4, 2012)
+important security update
+minor bug-fixes
+
+2.30.1162 (April 14, 2012)
+view spreadsheet in your application: now includes SpreadsheetControl for WinForms to view spreadsheets in WinForms applications!
+RangeSort sample has been added
+View Spreadsheet sample added
+improved support for sandboxed environments
+improved stability
+minor bug-fixes
+
+2.30.1106 (February 7, 2012)
+improved speed 
+improved memory usage
+minor issues with XLSX format fixed
+improved HTML export 
+updated documentation (offline and online), now includes full set of source code samples for the SDK
+minor bug-fixes and improvements
+
+2.30.980 (September 29, 2011)
+now with 12 chart types supports (see Advanced Examples for C# and VB.NET samples)
+issue with incorrect cell border writing causing Cell Format dialog not shown on some Excel versions
+new assembly attribute [assembly: SecurityRules(SecurityRuleSet.Level1)] for compatibility with Security-Transparent feature of .NET 4.0.
+ImportFromDataSet and ImportFromDataTable will add new worksheets automatically if table row count exceeds 65536.
+error causing XLS to open in safe mode fixed
+export to CSV and TXT speed improved for large sets of data 
+new ImportFromDataSet() and ImportFromDataTable() overloads with row limit parameter
+Cell.ValueAsExcelDisplays (Cell.ValueAsString) works correct for formats with [$-F800] [$-F400]. For example, "[$-F800]dddd\,\ mmmm\ dd\,\ yyyy"
+fixing issue with Microsoft Office File Validation Add-In opens xls with charts with warning messages
+some identifiers in PatternStyle names were changed according to similar names in VBA
+.Value property issue with System.Decimal converting to String instead of Double was fixed
+CellAddress, CellsRange, VtHeadingPair were transformed from structures into classes
+exposed Pictures and PictureShape are available through COM interfaces now
+new COM interface samples: Adding Images, Change Column Height, Change Row Height
+new method for COM compatibility SetFontProperties(string FontName, bool IsBold, bool IsItalic, bool IsUnderline, float Size, int R, int G, int B)
+minor bug-fixes and improvements
+
+2.30.832 (May 6, 2011)
+
+new samples were added: Export To 2D Array, Export To Data Table, Export To DataSet, Export To Jagged Array, Export To List, Import From 2D Array, Import From Data Table, Import From DataSet, Import From Jagged Array, Import From List
+documentation updates
+.NET 3.5, .NET 4.00, .NET 3.5 Client Profile and .NET 4.00 Clent Profile versions assemblies were added
+Methods to import from and export to 2D arrays, jagged arrays, Data Grids, Data Tables, Lists were added (see Advanced Examples/ for source code samples
+documentation: advanced examples updated to use .LoadFromFile() instead of loading file in constructors
+XML documentation is supplied now to provide inline help for classes, methods and properties in Visual Studio
+Export To PDF sample added (removing old XLS2PDF sample)
+problem with line breaks strings fixed
+problem with current locale (CultureInfo.CurrentCulture) used instead of locale from Excel file was fixed
+class ViewOptions (Worksheet.ViewOptions) provides new properties: Zoom (sheet view zoom in percents), SplitColumn, SplitRow, SplitHorizontal, SplitVertical, ActivePane (related to splitting of a worksheet window to 4 parts). Works simliar to VBA properties for Window class
+problem with not saving current selection in XLS and XLSX files was fixed
+Spreadsheet SDK console changed to accept PRO License serials instead of "Console" license types
+Saving to PDF function has been added
+minor improvements and bug-fixes
+
+
+2.30.761 (9 February 2011)
+* minor bug-fixes and improvements
+* improved XLSX handling
+* improved XLS handling
+
+2.30.686 (27 November 2010)
+* minor bug-fixes and improvements
+
+2.30.678 (12 November 2010)
++ Range.IsEmpty, Worksheet.IsEmpty were added
++ hyperlinks support in HTML export
++ improved support for XLSX format reading and writing
++ improved support for XLS format reading and writing
++ formula calculation improved
+* minor bug-fixes
+
+2.20.517 (12 May 2010)
+! REGISTERED USERS: Now use .RegistrationKey and .RegistrationName properties of Spreadsheet class to set your name and serial key
+! Now please use .LoadFromFile() method to load from file instead using Spreadsheet() constructor
+* minor bug-fixes in the console version
+* minor bug-fixes in XLS and XLSX reading and writing support
++ improved support for XLSX files made with OpenOffice
++ new functions support: HLOOKUP, VLOOKUP 
+
+2.20.501 (27 April 2010)
+* minor bug-fixes in XLSX reading and writing support
+* console version has been improved: now /S parameter works for CSV and TXT files as well and provides output for each worksheet as a separate file
+
+2.20.496 (20 April 2010)
+* minor bug-fixes in XLS reading and writing support
+* bug with missing charts after reading and then writing back some XLS
+
+2.20.494 (18 April 2010)
+* minor bug-fixes 
+* .NET 1.10 version: improved support for ASP.NET with .NET 1.10 
+* now can be used from ASP.NET 2.00 in the Medium Trust mode
+
+2.20.491 (15 April 2010)
+* minor bug-fixes
+
+2.20.490 (14 April 2010)
+* minor bug-fixes for custom colors support for cells
+
+2.20.482 (12 April 2010)
++ now can use custom colors for cells, you need to add the color into the palette before using it, for example:
+
+spreadsheet.Workbook.Worksheets[0].Cell("F9").FillPattern = PatternStyle.Solid;
+spreadsheet.Workbook.Colors[20] = Color.FromArgb(133, 113, 201);
+spreadsheet.Workbook.Worksheets[0].Cell("F9").FillPatternForeColor = Color.FromArgb(133, 113, 201);
+
+OR 
+
+spreadsheet.Workbook.Colors[20] = Color.FromArgb(133, 113, 201);
+spreadsheet.Workbook.Worksheets[0].Cell("F9").FillPatternForeColor = spreadsheet.Workbook.Colors[20];
+ 
+OR 
+
+spreadsheet.Workbook.Colors[20] = Color.FromArgb(133, 113, 201);
+spreadsheet.Workbook.Colors[20] = spreadsheet.Workbook.Worksheets[0].Cell("F9").FillPatternForeColor
+
+* bug with merged cells not working correctly after columns insertion/deletion
++ HLOOKUP and VLOOKUP functions support were added
+
+2.20.472 (1 April 2010)
+* minor bug-fixes with UsedRangeColumnMax and UsedRangeRowMax while using XLSX files
+* minor XLSX improvements
+
+2.20.454 (2 March 2010)
+* bug fixed with graph objects damaged after worksheet copying/moving operations
+* bug fixed with worksheets copying
+
+2.20.451 (27 February 2010)
+! REGISTERED USERS: Now use .RegistrationKey and .RegistrationName properties of Spreadsheet class to set your name and serial key
+! Now please use .LoadFromFile() method to load from file instead using Spreadsheet() constructor
++ IEnumerable implementation for Worksheet class
+* Worksheet.Visible support for XLSX fixed
+* bug with  UsedRangeColumnMax and UsedRangeRowMax in XLS fixed
+* improved XLSX support 
+
+2.20.441 (22 February 2010)
++ new formulas support: ROUNDDOWN, ROUNDUP, FLOOR, CEILING, OR, AND, SEARCH, POWER
+* minor fixes in formula calculation engine
++ new property: Worksheet.Visible indicate if worksheet is hidden or not
+
+2.20.433 (15 February 2010)
+* minor formula calculation fixes
+* improved support for password protected XLSX files
+* minor improvements and bug-fixes
+
+
+2.20.421 (18 January 2010)
+* improved XLS reading support
+* minor bug-fix with [$-409] like format string support
+* minor bug-fixes and improvements
+
+2.20.415 (29 December 2009)
+* bug with quotes fixed in CSV and TXT writing
+* bug fix with HTML text support in XLSX format
+
+
+2.20.399 (22 December 2009)
++ CF.NET (Pocket PC and Windows CE versions) were added
++ support for optional Quote symbol in text export function
++ new Row.AutoFit and Column.AutoFit functions
++ background picture support (for XLS format)
++ XNPV function support added into the calculation engine
++ console edition (Bytescout.Spreadsheet.Console.exe) added for command line use (to convert spreadsheet files from one format to another)
++ search functionality has been added into Worksheet class
+* minor bug-fixes and improvements
+* improved images supports
+* minor bug-fixes and improvements
+* improved internal memory management
+* minor bug-fixes in XLSX images writings support
+* minor bug-fixes in XLSX images writings support
+* XLS writing memory requirementes decreased
++ images writing support for XLSX format added
+* minor bug-fixes in XLS reading support
+* CSV and TXT locked files problem fixed
++ Column.AutoFit function has been added to adjust size of column to a text width
+* bug with Short type value not working for Cell.Value fixed
+* minor bug-fixes
+* XLSX format support minor bug-fixes (bug fixed with Open Office 3.0 while opening XLSX files produced by the library)
+* minor bug-fixes and improvements
++ initial pictures support for XLS format (see Worksheet.Pictures...)
+* XLS reading functionality minor bug-fixes
+* 3D and 3DArea links support in the formula calculation engine
+* minor bug-fixes
+
+2.11.252 (10 July 2009)
++ now you can use Spreadsheet SDK component from the Toolbox in WinForms and ASP.NET applications
+* minor bug-fixes in CSV export support
+* minor improvements in installer
+* .NET 2.00 dll can work as ActiveX now as well as .NET 1.10 version of the dll
+* documentation updates
+
+2.11.251 (30 June 2009)
+* minor bug-fixes
+
+2.11.249 (20 June 2009)
+* important memory leaks were fixed
+
+2.11.241 (15 June 2009)
+* minor bug-fixes in formula calculations engine
+* HTML export minor bug-fixes
+
+2.11.237 (12 June 2009)
+* bug fixed: handle to the file is not released after the exception
+* bug fixed with broken text in some spreadsheets
+* CONCATENATE formula function support has been added
+* XLSX reading has been improved
+* HTML export functionality has been greatly improved 
+* minor bug-fixes
+
+2.11.226 (8 June 2009)
+* minor bug-fixes in XLSX reading support
+
+2.11.219 (1 June 2009)
+* minor bug-fixes in XLSX support
+
+2.11.213 (26 May 2009)
+* &lt;Data may have been lost&gt; message while opening XLS in Excel fixed 
++ new Spreadsheet.Options class
++ XLS files protection support for worksheets (see Worksheet.Protected, Worksheet.Protect and .UnProtect)
+* Bytescout.Spreadsheet.BaseClasses.Gridline renamed into .GridLineColor
+* Bytescout.Spreadsheet.BaseClasses.GridLinesColor renamed into .GridLineColorEnabled
+* Bytescout.Spreadsheet.Constants.AlignmentHorizontal.CentredSelect renamed into .�enteredSelect
+* new .RangeSelectionMethod property to control how selection works with merged cells while using .CopyAndPaste and .CopyInto methods
+* ActiveX interface support (to use from VBScript, Javascript, Visual Basic 6)
++ SDK now comes with the Dashboard
+* minor bug-fixes and improvements
+* documentation updates and new samples
+
+2.10.157 (19 April 2009)
++ now supports .NET 1.10
+* minor bug-fixes in CSV reading support
+* minor bug-fixes in calculation support
+~ Cell.FormatType has been renamed into Cell.NumberFormatType
+~ Cell.NumberFormatType has been renamed into Cell.ValueDataTypeByNumberFormatString 
++ new properties: Cell.ValueAsDouble, Cell.ToDouble, Cell.ToInteger, Cell.ToDateTime, Cell.ToHTML, Cell.IsInteger (indicates if you cell contains float or integer value), Cell.ValueDateType (indicates data type cell contains), Cell.ValueAsUnformattedString, Cell.ValueAsInteger, Cell.ValueAsBoolean
+* minor bug-fixes
+
+2.10.137 (6 April 2009)
++ .AddInFunctionsNamesLocale property added to set locale for localized functions names
+* minor bug-fixes in calculations support
+
+2.10.136 (6 April 2009)
+* minor internal fixes and improvements
+* XIRR function support added into formula calculation engine
+
+2.00.109 (28 March 2009)
+* minor fixes in the installer 
+
+2.00.101 (25 March 2009)
++ formula calculation support has been added
+~ updated documentation, new samples
+* minor bug-fixes
+
+2.00.86 (21 March 2009)
++ new methods: Spreadsheet.SaveAsXLS, SaveAsXLS, SaveAsTXT, SaveAsCSV, SaveAsXML
++ new methods: Spreadsheet.SaveToStreamXLS, SaveToStreamSaveAsXLS, SaveToStreamSaveAsTXT, SaveToStreamSaveAsCSV, SaveToStreamSaveAsXML
++ minor changes and bug-fixes
+
+1.50.57 (14 March 2009)
+~ WorkBook renamed to Workbook (case-sensitive)
+~ Worksheet.LastRow renamed to .UsedRangeRowMax
+~ Worksheet.LastColumn renamed to .UsedRangeColumnMax
+* minor bug-fixes
+
+1.50.54 (25 Feb 2009)
+~ .ValueAsString removed, use .ToString() and .ValueAsExcelDisplays instead
++ support for tab-delimited .TXT files reading
++ can set delimiter char while reading spreadsheet from TXT or CSV file
+* minor bug-fixes
+
+1.50.25 (25 Jan 2009)
+!! the DLL renamed from Bytescout.XLS.dll into Bytescout.Spreadsheet.dll
+!! the namespace renamed from Bytescout.XLS into Bytescout.Spreadsheet
+~ method Cell.ValueFormatted renamed Cell.ValueAsHTML~ method 
+~ method Cell.Type renamed Cell.TypeBIFFFormat
+~ method Cell.GetFormatType renamed Cell.NumberFormatType
+~ method Cell.Calc renamed Cell.Calculate
+~ method Row.ColCount renamed Row.ColumnCount
+~ method Row.colMax renamed Row.LastNonEmptyColumn
+~ method Row.colMin renamed Row.FirstNonEmptyColumn
++ new method Vell.ValueAsExcelDisplays
+* minor bug-fix with loading XLS containing some types of charts
+
+1.40.22 ( October 2008)
++ new method to copy worksheets: Worksheets.Copy()
+
+1.40.1 (18 October 2008)
++ new method to copy worksheets: Worksheets.Copy()
+
+1.40 (15 October 2008)
++ XLSWorkBook.Properties added to work with SummaryInformation structure to write and read XLS document properties
+* Cell.NumberFormat property reading support
+* minor bug-fixes in negative values reading
+
+1.33 RC2 (27 September 2008)
+* minor bug-fixes in ODS reading support
+
+1.32.2 (23 July 2008)
++ advanced samples for VB.NET were added (see /Examples/Advanced Examples/ folder
+* minor bug-fixes
+* minor documentation updates
+
+1.32.1 (26 June 2008)
+* minor bug-fixes in XLS writing support
++ new samples in the documentation
+
+1.32 (25 June 2008)
+* bug fixed with file blocking while using existing spreadsheet file to read from 
+* improved XLS format support (for XLS produced by Open Office)
+* minor bug-fixes
+
+1.31 RC7 (16 June 2008)
+* minor bug-fixes in XLS reading support
+
+1.31 RC6 (14 June 2008)
++ new property Cell.ValueAsDateTime to read/write datetime values from cell
+* minor bug-fixes
+
+1.31 RC4 (9 June 2008)
+* minor bug-fixes
+* minor bug-fixes in unmerging cells support
+
+1.31 RC3 (4 June 2008)
+* minor bug-fixes in XLS writing support
+* internal optimization (XLS writing support)
+* updated documentation
+* minor bug-fixes
+
+1.31 RC2 (31 May 2008)
+~ improved exception handling
+~ improved cell format reading property
+
+1.31 RC1 (27 May 2008)
++ support for merging/unmerging cells functionality: Cell.Merge, Cell.Unmerge, Cell.MergedWith and Cell.MergedWithCell
+* minor bug-fixes
+
+1.30.4 (6 May 2008)
++ New methods for Range class: InnerBorderStyle, InnerBorderColor, OuterBorderStyle, OuterBorderColor
+~ .Format property of Cell, Column, Row, Range classes supports writing now as well (so you can copy formatting using code like this Sheet.Range("B2:M32").Format = Sheet.Cell("B2").Format;)
+* XSLX format reading support improved
++ Worksheet.Active property added to select the worksheet selected by default
+* bug with non-selected worksheets while writing XLS fixed
+~ Bytescout.XLS.Constants.HorAlignment has been renamed to Bytescout.XLS.Constants.AlignmentHorizontal
+~ Bytescout.XLS.Constants.VerticalAlignment has been renamed to Bytescout.XLS.Constants.AlignmentVertical
++ CSV reading support has been added
++ New properties for Row, Column, Cell, Range classes: IsDiagonalDownLine, IsDiagonalUpLine, DiagonalBorderStyle,
+DiagonalBorderColor to set color and style for diagonal lines for cell(s) formatting
+* minor bug-fixes
+~ updated documentation
++ more advanced examples were added (see /Examples/Advanced Examples/)
+
+1.30 RC (5 April 2008)
++ support for XLSX (Excel 2007) documents reading (formula reading are not supported yet)
++ support for ODS (Open Office) documents reading (formula reading are not supported yet)
++ new samples: Find string and highlight the cell with this string; Using different fonts; Line styles demonstration
+* bug with worksheets renaming fixed
+* rich-text handling improved while saveing XLS documents
+* minor bug-fixes and improvements
+
+1.20e (29 March 2008)
+* bug with exception while saving to the Response stream in ASP.NET fixed
+
+1.20 Release (12 March 2008)
+* minor bug-fixes
+* reading functionality Excel documents improved
+
+1.20 Beta 2 (4 March 2008)
+* minor bug-fixes reading worksheets in some Excel documents (.xls)
+
+1.20 Beta 1 (8 February 2008)
+~ limitation on reading more than 100 cells/rows in DEMO version removed
+
+1.20 Beta (4 February 2008)
++ .Formula property support for Cells to read and write formulas (e.g. =A2*C2*10%)
+~ improved for modification (read, change and write back) support for Office 97 and higher documents 
+* minor bug-fixes
+
+1.12 (15 January 2008)
+* minor bug-fixes in XLS documents modification support
+* minor bug-fixes
+
+1.11 (11 December 2007)
+* minor bug-fixes in XLS reading support for some XLS files
+* minor internal bug-fixes
+
+1.10a (28 November 2007)
+* Asian symbols support improved while reading XLS
+
+1.10 (24 November 2007)
+~ Export to HTML improved
+* minor bug-fixes in XLS reading support
+* minor internal bug-fixes
+
+1.01 (5 November 2007)
++ new methods: Worksheet.SaveAsCSV, SaveAsHTML, SaveAsTXT, SaveAsXML
++ new class HTMLTemplate for customized XLS to HTML export
+* minor bug-fixes
+
+1.00 (8 September 2007)
++ initial version</releaseNotes>
+    <copyright>(c) 2015 ByteScout</copyright>
+    <tags>bytescout write xls read xlsx csv excel xslx xml workbook worksheet formula calculate ods</tags>
+  </metadata>
+</package>
