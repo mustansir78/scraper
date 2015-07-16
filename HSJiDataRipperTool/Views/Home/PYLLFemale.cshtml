@@ -1,0 +1,43 @@
+﻿@model HSJiDataRipperTool.Models.PYLLModel
+
+@{
+    ViewBag.Title = ViewBag.ReportTitle;
+}
+<div class="row">
+    <div class="col-md-12 text-right"><span>@Html.ActionLink("Export to Excel", "PYLLFemaleExportCSV", "Home")</span></div>
+</div>
+<div class="container">
+    <table class="table table-bordered table-responsive" id="mytable">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Breakdown</th>
+                <th>Level</th>
+                <th colspan="3">Level Description</th>
+                <th>Gender</th>
+                <th>DSR</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (HSJiDataRipperTool.Models.PYLLRecord item in Model.PYLLList)
+            {
+                <tr>
+                    <td>@item.Period</td>
+                    <td>@item.Breakdown</td>
+                    <td>@item.Level</td>
+                    <td colspan="3">@item.LevelDescription</td>
+                    <td>@item.Gender</td>
+                    <td>@item.DSR</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script src="~/Scripts/jquery.tablesorter.min.js"></script>
+<script src="~/Scripts/jquery.tablesorter.widgets.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#mytable").tablesorter();
+    });
+</script>

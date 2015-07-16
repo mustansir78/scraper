@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "HSJ";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Getting started</h2>
+        <p>
+            Click on the 'Process' button below to download the data from respective NHS and related websites, process them and show them in the reports.
+        </p>
+        <p>
+            Once done, access the reports from the menu above to view and export them to Excel.
+        </p>
+        <p>@Html.ActionLink("Process", "DoProcess", "Home", new { @class = "btn btn-primary" })</p>
+    </div>
+</div>
